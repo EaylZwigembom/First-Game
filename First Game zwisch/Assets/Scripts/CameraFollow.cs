@@ -1,13 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform camero;
-    public Transform player;
-    public Vector3 eyes;
-public void FixedUpdate(){
+    [SerializeField] private Transform camero;
+    [SerializeField] private Transform player;
+    [SerializeField] private Vector3 eyes;
+
+    
+private void FixedUpdate(){
     camero.position = player.position + eyes;
 }
 }
